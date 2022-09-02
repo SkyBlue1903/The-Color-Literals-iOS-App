@@ -13,6 +13,7 @@
 		57D4E9B028C21DD2004EDC72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57D4E9AE28C21DD2004EDC72 /* Main.storyboard */; };
 		57D4E9B228C21DD2004EDC72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57D4E9B128C21DD2004EDC72 /* Assets.xcassets */; };
 		57D4E9B528C21DD2004EDC72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57D4E9B328C21DD2004EDC72 /* LaunchScreen.storyboard */; };
+		57D4E9C628C25028004EDC72 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = 57D4E9C528C25028004EDC72 /* Toast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57D4E9C628C25028004EDC72 /* Toast in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +60,29 @@
 			children = (
 				57D4E9A828C21DD2004EDC72 /* AppDelegate.swift */,
 				57D4E9AA28C21DD2004EDC72 /* SceneDelegate.swift */,
-				57D4E9AC28C21DD2004EDC72 /* ViewController.swift */,
-				57D4E9AE28C21DD2004EDC72 /* Main.storyboard */,
+				57D4E9BD28C22C91004EDC72 /* View */,
+				57D4E9BC28C22C88004EDC72 /* Controller */,
 				57D4E9B128C21DD2004EDC72 /* Assets.xcassets */,
 				57D4E9B328C21DD2004EDC72 /* LaunchScreen.storyboard */,
 				57D4E9B628C21DD2004EDC72 /* Info.plist */,
 			);
 			path = "The Color Literals";
+			sourceTree = "<group>";
+		};
+		57D4E9BC28C22C88004EDC72 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				57D4E9AC28C21DD2004EDC72 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		57D4E9BD28C22C91004EDC72 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				57D4E9AE28C21DD2004EDC72 /* Main.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +101,9 @@
 			dependencies = (
 			);
 			name = "The Color Literals";
+			packageProductDependencies = (
+				57D4E9C528C25028004EDC72 /* Toast */,
+			);
 			productName = "The Color Literals";
 			productReference = 57D4E9A528C21DD2004EDC72 /* The Color Literals.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +132,9 @@
 				Base,
 			);
 			mainGroup = 57D4E99C28C21DD1004EDC72;
+			packageReferences = (
+				57D4E9C428C25028004EDC72 /* XCRemoteSwiftPackageReference "toast-swift" */,
+			);
 			productRefGroup = 57D4E9A628C21DD2004EDC72 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,6 +382,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		57D4E9C428C25028004EDC72 /* XCRemoteSwiftPackageReference "toast-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/BastiaanJansen/toast-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		57D4E9C528C25028004EDC72 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 57D4E9C428C25028004EDC72 /* XCRemoteSwiftPackageReference "toast-swift" */;
+			productName = Toast;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 57D4E99D28C21DD1004EDC72 /* Project object */;
 }
